@@ -11,6 +11,7 @@ module.exports = team => {
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
         <section class="hero is-primary">
@@ -22,7 +23,7 @@ module.exports = team => {
         </section>
         
         <div class="main">
-               <div>
+                          <div>
                     ${createProfile(team)}
                 </div>
         </div>
