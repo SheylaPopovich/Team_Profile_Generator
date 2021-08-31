@@ -10,7 +10,7 @@ module.exports = team => {
         <title>Team Profile Generator</title>
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="./style.css">
         
     </head>
     <body>
@@ -22,12 +22,14 @@ module.exports = team => {
         </div>
         </section>
         
-        <div class="main">
-                          <div>
+        <section class="section">
+        <div class="container">
+                <div>
                     ${createProfile(team)}
                 </div>
         </div>
-        </div>
+    
+        </section>
     </body>
     </html>
     `;
@@ -37,8 +39,11 @@ module.exports = team => {
 const createProfile = team => {
 
     // Create Manager Profile
+    //-----------Card 1----------
     const createManager = manager => {
         return `
+        <section class="section">
+        <div class="container">
         <div class="card">
             <div class="card-header">
                 <h2 class="card-header-title">${manager.getName()}</h2>
@@ -52,15 +57,19 @@ const createProfile = team => {
                 </ul>
             </div>
         </div>
+        </div>
+        </section>
         `;
     };
 
     // Create Engineer Profile
     const createEngineer = engineer => {
         return `
+        <section class="section">
+        <div class="container">
         <div class="card">
             <div class="card-header">
-                <h2 class="card-header-title">${engineer.getName()}</h2>
+                <h2 class="">${engineer.getName()}</h2>
                 <h4 class="card-header-title">Title: ${engineer.getPosition()}</h4>
             </div>
             <div class="card-content">
@@ -71,25 +80,31 @@ const createProfile = team => {
                 </ul>
             </div>
         </div>
+        </div>
+        </section>
         `;
     };
 
     // Create Intern Profile
     const createIntern = intern => {
         return `
+        <section class="section">
+        <div class="container">
         <div class="card">
             <div class="card-header">
                 <h2 class="card-header-title">${intern.getName()}</h2>
                 <h4 class="card-header-title">Title: ${intern.getPosition()}</h4>
             </div>
-            <div class="card-body bg-light">
-                <ul class="list-group text-dark">
+            <div class="">
+                <ul class="">
                     <li class="list-group-item">ID: ${intern.getId()}</li>
                     <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                     <li class="list-group-item">School: ${intern.getSchool()}</li>
                 </ul>
             </div>
         </div>
+        </div>
+        </section>
         `;
     };
 
