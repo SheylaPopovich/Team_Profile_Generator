@@ -13,19 +13,19 @@ module.exports = team => {
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 jumbotron text-white mb-3">
-                    <h1 class="text-center">The Dream Team</h1>
-                </div>
-            </div>
+        <section class="hero is-primary">
+        <div class="hero-body">
+        <p class="title is-center">
+            My Team
+        </p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="main-section col-12 d-flex justify-content-center">
+        </section>
+        
+        <div class="main">
+               <div>
                     ${createProfile(team)}
                 </div>
-            </div>
+        </div>
         </div>
     </body>
     </html>
@@ -38,16 +38,16 @@ const createProfile = team => {
     // Create Manager Profile
     const createManager = manager => {
         return `
-        <div class="card employee-card manager-card">
-            <div class="card-header text-center">
-                <h2 class="card-title">${manager.getName()}</h2>
-                <h4 class="card-title">Title: ${manager.getRole()}</h4>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-header-title">${manager.getName()}</h2>
+                <h4 class="card-header-title">Title: ${manager.getPosition()}</h4>
             </div>
-            <div class="card-body bg-light">
-                <ul class="list-group text-dark">
+            <div class="card-content">
+                <ul class="">
                     <li class="list-group-item">ID: ${manager.getId()}</li>
                     <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
-                    <li class="list-group-item">Office number: <a href="tel:${manager.getofficeNumber()}">${manager.getofficeNumber()}</a></li>
+                    <li class="list-group-item">Office number: <a href="tel:${manager.getOfficeNumber()}">${manager.getOfficeNumber()}</a></li>
                 </ul>
             </div>
         </div>
@@ -57,16 +57,16 @@ const createProfile = team => {
     // Create Engineer Profile
     const createEngineer = engineer => {
         return `
-        <div class="card employee-card engineer-card">
-            <div class="card-header text-center">
-                <h2 class="card-title">${engineer.getName()}</h2>
-                <h4 class="card-title">Title: ${engineer.getRole()}</h4>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-header-title">${engineer.getName()}</h2>
+                <h4 class="card-header-title">Title: ${engineer.getPosition()}</h4>
             </div>
-            <div class="card-body bg-light">
+            <div class="card-content">
                 <ul class="list-group text-dark">
                     <li class="list-group-item">ID: ${engineer.getId()}</li>
                     <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
-                    <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.getGitHub()}</a></li>
+                    <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGithub()}" target="_blank" rel="noopener noreferrer">${engineer.getGithub()}</a></li>
                 </ul>
             </div>
         </div>
@@ -76,10 +76,10 @@ const createProfile = team => {
     // Create Intern Profile
     const createIntern = intern => {
         return `
-        <div class="card employee-card intern-card">
-            <div class="card-header text-center">
-                <h2 class="card-title">${intern.getName()}</h2>
-                <h4 class="card-title">Title: ${intern.getRole()}</h4>
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-header-title">${intern.getName()}</h2>
+                <h4 class="card-header-title">Title: ${intern.getPosition()}</h4>
             </div>
             <div class="card-body bg-light">
                 <ul class="list-group text-dark">
@@ -95,16 +95,16 @@ const createProfile = team => {
     const html = [];
 
     html.push(team
-        .filter(employee => employee.getRole() === 'Manager')
+        .filter(employee => employee.getPosition() === 'Manager')
         .map(manager => createManager(manager))
     );
     html.push(team
-        .filter(employee => employee.getRole() === 'Engineer')
+        .filter(employee => employee.getPosition() === 'Engineer')
         .map(engineer => createEngineer(engineer))
         .join("")
     );
     html.push(team
-        .filter(employee => employee.getRole() === 'Intern')
+        .filter(employee => employee.getPosition() === 'Intern')
         .map(intern => createIntern(intern))
         .join("")
     );
