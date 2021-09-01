@@ -11,8 +11,7 @@
 <br>
 
 ## **Description**
-This is a command-line application that dynamically generates a webpage that will display your built team 
-HTMLfile from a GitHub username. The application will be invoked with the following command: node index.js. The user will be prompted for a GitHub Username and favorite color, which will be used as the background color for cards. The PDF will be populated with the following:
+This is a command-line application takes in information about employees on a software engineering team, then dynamically generates a webpage that will display your built team. The application will be invoked with the following command: node index.js. This program is a perfect tool to manage all members of organization and company's profiles information.
 <br>
 <br>
 
