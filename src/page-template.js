@@ -39,7 +39,7 @@ const createProfile = (team) => {
                 <h2 class="card-header-title">${manager.getName()}</h2>
             </div>
             <div class="card-header">
-                <h4 class="card-header-title"><i class="fas fa-briefcase fa-2x"></i>Title: ${manager.getPosition()}</h4>
+                <h4 class="card-header-title"><i class="fas fa-briefcase fa-2x"></i>${manager.getPosition()}</h4>
             </div>
             <div class="card-content">
                 <ul>
@@ -62,7 +62,7 @@ const createProfile = (team) => {
                 <h2 class="card-header-title">${engineer.getName()}</h2>
             </div>
             <div class="card-header">
-                <h4 class="card-header-title"><i class="fas fa-hard-hat fa-2x"></i>Title: ${engineer.getPosition()}</h4>
+                <h4 class="card-header-title"><i class="fas fa-hard-hat fa-2x"></i>${engineer.getPosition()}</h4>
             </div>
             <div class="card-content">
                 <ul class="list-group text-dark">
@@ -85,7 +85,7 @@ const createProfile = (team) => {
                 <h2 class="card-header-title">${intern.getName()}</h2>
                 </div>
                 <div class="card-header">
-                <h4 class="card-header-title"><i class="far fa-address-book fa-2x"></i>Title: ${intern.getPosition()}</h4>
+                <h4 class="card-header-title"><i class="fas fa-graduation-cap fa-2x"></i>${intern.getPosition()}</h4>
             </div>
             <div class="card-content">
                 <ul>
