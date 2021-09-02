@@ -198,7 +198,7 @@ function addIntern() {
                 if (answer !== "") {
                     return true;
                 }
-                return "Please enter a proper school.";
+                return "Please enter a proper school name.";
             }
         },
     ]) .then(answers => {
@@ -213,7 +213,16 @@ function generateHTML() {
     if (!fs.existsSync(DIST_DIR)) {
         fs.mkdirSync(DIST_DIR);
     }
-    console.log("Generating Team Profile.... ");
+    console.log(`
+    
+    ===================================================
+                   🎇✨Congrats!✨🎇
+    ===================================================
+    Your team profile has been successfully created! 
+    ===================================================
+    Please check out the 'index1.html' in dist folder
+    ===================================================
+    `);
     fs.writeFileSync(outputPath, render(teamArr), "utf-8");
 }
 
