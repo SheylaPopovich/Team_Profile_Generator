@@ -188,7 +188,7 @@ function addIntern() {
                     return true;
                 }
                 return "Please enter a valid email address.";
-            }
+            } 
         },
         {
             type: "input",
