@@ -46,9 +46,10 @@ Download the [Node.js](https://nodejs.org/en/download/) source code or a pre-bui
 <br>
 <br>
 
-## Contact
+## **Contact**
 If you want to contact me you can email me at [SheylaPopovich](mailto:sheylapopovich@gmail.com).
-
+<br>
+<br>
 
 ## **License**
 The README Generator content management system is released under the under terms of the [MIT License.](https://github.com/SheylaPopovich/README-generator/blob/main/LICENSE)

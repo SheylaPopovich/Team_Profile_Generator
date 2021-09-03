@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const path = require("path");
 
+const chalk = require('chalk'); 
 
 
 const Manager = require("./lib/Manager");
@@ -213,16 +214,13 @@ function generateHTML() {
     if (!fs.existsSync(DIST_DIR)) {
         fs.mkdirSync(DIST_DIR);
     }
-    console.log(`
-    
-    ===================================================
+    console.log(chalk.blue(`===========================================================
                    🎇✨Congrats!✨🎇
     ===================================================
-    Your team profile has been successfully created! 
+     Your team profile has been successfully created! 
     ===================================================
-    Please check out the 'index1.html' in dist folder
-    ===================================================
-    `);
+     Please check out the 'index.html' in dist folder
+    ===================================================`));
     fs.writeFileSync(outputPath, render(teamArr), "utf-8");
 }
 
