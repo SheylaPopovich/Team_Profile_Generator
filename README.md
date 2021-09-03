@@ -17,6 +17,7 @@ This is a command-line application takes in information about employees on a sof
 
 ## **Project Demo** 
 This [demo video](https://github.com/SheylaPopovich/README-generator/blob/main/utils/assets/README-generator-demo.gif) will walk you through the application and its usage.
+![alt text](assets\team_profile_generator.png)
 <br>
 <br>
 
@@ -36,13 +37,6 @@ Download the [Node.js](https://nodejs.org/en/download/) source code or a pre-bui
 * [HTML](https://www.w3schools.com/html/) - Used to dynamically populate the style and structure of the user profile once the command line applicaton is run.
 * [CSS](https://www.w3schools.com/css/) - Styles html elements in rendered HTML page. 
 * [Bulma](https://bulma.io/) -  Framework to build responsive web for HTML. 
-
-
-
-
-
-
-
 <br>
 <br>
 
