@@ -16,7 +16,7 @@ This is a command-line application takes in information about employees on a sof
 <br>
 
 ## **Project Demo** 
-This [demo video](https://github.com/SheylaPopovich/Team_Profile_Generator/blob/main/assets/team_profile_generator_demo.gif) will walk you through the application and its usage.
+This [demo video](https://drive.google.com/file/d/1tflXE48IKSXCOYNNvRSs_UBMKOgoqlxK/preview) will walk you through the application and its usage.
 ![alt text](https://user-images.githubusercontent.com/84256748/132050856-1e175010-b43e-4669-a615-4a3f29ece45e.png)
 <br>
 <br>
